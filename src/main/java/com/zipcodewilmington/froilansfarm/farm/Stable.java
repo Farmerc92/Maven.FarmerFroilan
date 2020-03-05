@@ -2,10 +2,11 @@ package com.zipcodewilmington.froilansfarm.farm;
 import com.zipcodewilmington.froilansfarm.animal.Horse;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Stable{
 
-    ArrayList<Horse> horses = new ArrayList<Horse>();
+    private ArrayList<Horse> horses = new ArrayList<Horse>();
 
 
     public void addHorses(Integer numOfHorses){
@@ -31,5 +32,9 @@ public class Stable{
     }
     public Integer getNumOfHorses(){
         return this.horses.size();
+    }
+
+    public List getHorses(){
+        return this.horses;
     }
 }

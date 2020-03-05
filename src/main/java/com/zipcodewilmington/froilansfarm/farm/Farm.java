@@ -6,12 +6,14 @@ import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 import com.zipcodewilmington.froilansfarm.vehicle.Vehicle;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Farm {
 
     ArrayList<Stable> stables = new ArrayList<Stable>();
     ArrayList<ChickenCoop> chickenCoops = new ArrayList<ChickenCoop>();
+    ArrayList<Field> fields = new ArrayList<>();
     CropDuster cropDuster;
     Tractor tractor;
     Field farmField = new Field();
@@ -68,13 +70,13 @@ public class Farm {
     public ChickenCoop getChickenCoop(Integer coopNum){
         return this.chickenCoops.get(coopNum -1);
     }
+
     public ArrayList<ChickenCoop> getAllCoops(){
         return this.chickenCoops;
     }
     public Integer getNumOfCoops(){
         return this.chickenCoops.size();
     }
-
     // ********************************************************************************
     public Farmer getFarmer(){
         return this.farmer;
@@ -88,6 +90,7 @@ public class Farm {
     public CropDuster getCropDuster(){
         return this.cropDuster;
     }
+    
 
 
 }

@@ -5,6 +5,6 @@ import com.zipcodewilmington.froilansfarm.farm.CropRow;
 
 public interface Botanist {
 
-      public void plant();
+      public void plant(Crop cropType, CropRow rowNumber);
     }
 

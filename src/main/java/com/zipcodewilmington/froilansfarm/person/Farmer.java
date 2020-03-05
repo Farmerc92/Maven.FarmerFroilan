@@ -12,9 +12,6 @@ public class Farmer extends Person implements Botanist, Rider{
         super(name, gender);
     }
 
-    public void plant() {
-    }
-
     public void eat() {
         System.out.println("Yum!");
     }
@@ -37,4 +34,9 @@ public class Farmer extends Person implements Botanist, Rider{
 
     public String makeNoise() { return "Howdy Partner"; }
 
+    @Override
+    public void plant(Crop cropType, CropRow rowNumber) {
+        rowNumber.setCropType(cropType);
+
+    }
 }
