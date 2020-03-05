@@ -1,8 +1,11 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
+import com.zipcodewilmington.froilansfarm.animal.Chicken;
 import com.zipcodewilmington.froilansfarm.animal.Horse;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 public class StableTest{
 
@@ -44,6 +47,15 @@ public class StableTest{
         Integer expected = 2;
         Integer actual = stable3.getNumOfHorses();
         Assert.assertEquals(expected,actual);
+    }
+    @Test
+    public void getHorsesListTest(){
+        Stable stable1 = new Stable();
+        stable1.addHorses(4);
+
+        ArrayList<Horse> stable1Horses = stable1.getHorsesList();
+
+        Assert.assertEquals(4, stable1Horses.size());
     }
 
 }

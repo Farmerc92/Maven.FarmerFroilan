@@ -44,6 +44,12 @@ public class Farm {
     public Stable getStable(Integer stableNum){
         return this.stables.get(stableNum -1);
     }
+    public ArrayList<Stable> getAllStables(){
+        return this.stables;
+    }
+    public Integer getNumOfStables(){
+        return this.stables.size();
+    }
 
     // ********************************************************************************    Chickens & coops   **********
     public void setUpCoops(Integer numOfCoops){
@@ -62,6 +68,13 @@ public class Farm {
     public ChickenCoop getChickenCoop(Integer coopNum){
         return this.chickenCoops.get(coopNum -1);
     }
+    public ArrayList<ChickenCoop> getAllCoops(){
+        return this.chickenCoops;
+    }
+    public Integer getNumOfCoops(){
+        return this.chickenCoops.size();
+    }
+
     // ********************************************************************************
     public Farmer getFarmer(){
         return this.farmer;

@@ -15,6 +15,9 @@ public class Stable{
             horses.add(genericHorse);
         }
     }
+    public ArrayList<Horse> getHorsesList(){
+        return this.horses;
+    }
 
     public void removeHorses(Integer numToRemove){
 

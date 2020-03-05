@@ -4,6 +4,8 @@ import com.zipcodewilmington.froilansfarm.animal.Chicken;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class ChickenCoopTest {
 
     Chicken genericChicken = new Chicken();
@@ -44,6 +46,15 @@ public class ChickenCoopTest {
         Integer expected = 2;
         Integer actual = coop4.getNumOfChickens();
         Assert.assertEquals(expected,actual);
+    }
+    @Test
+    public void getChickenListTest(){
+        ChickenCoop coop1 = new ChickenCoop();
+        coop1.addChickens(4);
+
+        ArrayList<Chicken> coop1Chickens = coop1.getChickensList();
+
+        Assert.assertEquals(4, coop1Chickens.size());
     }
 
 }

@@ -15,7 +15,7 @@ public class ChickenCoop {
             chickens.add(genericChicken);
         }
     }
-    public ArrayList<Chicken> getChickens(){
+    public ArrayList<Chicken> getChickensList(){
         return this.chickens;
     }
 
