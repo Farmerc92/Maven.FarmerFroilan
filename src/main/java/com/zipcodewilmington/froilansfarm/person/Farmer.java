@@ -16,6 +16,7 @@ public class Farmer extends Person implements Botanist, Rider{
     }
 
     public void eat() {
+        System.out.println("Yum!");
     }
 
     public void dismount(Rideable rideable) {

@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.crop;
 import com.zipcodewilmington.froilansfarm.Produce;
 import com.zipcodewilmington.froilansfarm.crop.CarrotRoot;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
+import com.zipcodewilmington.froilansfarm.food.Carrot;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,23 +12,37 @@ public class CarrotRootTest {
 
 
     @Test
-    public void carrotRootTest1() {
+    public void carrotRootCropTest1() {
         Assert.assertTrue(testCarrotRoot instanceof Crop);
     }
 
     @Test
-    public void carrotRootTest2() {
+    public void carrotRootProduceTest() {
         Assert.assertTrue(testCarrotRoot instanceof Produce);
     }
 
     @Test
-    public void carrotTest5() {
-        //Assert.assertFalse(testCarrotRoot.fertilized());
+    public void carrotRootYieldTest() {
+        CarrotRoot testCarrotRoot = new CarrotRoot();
+        testCarrotRoot.fertilized = false;
+        Carrot actual = testCarrotRoot.yield();
+        Assert.assertNull(actual);
     }
 
     @Test
-    public void carrotTest6() {
-        //Assert.assertFalse(testCarrotRoot.harvested());
+    public void carrotRootYieldTest2() {
+        CarrotRoot testCarrotRoot = new CarrotRoot();
+        testCarrotRoot.harvested = false;
+        Carrot actual = testCarrotRoot.yield();
+        Assert.assertNull(actual);
     }
 
+    @Test
+    public void carrotRootYieldTest3() {
+        CarrotRoot testCarrotRoot = new CarrotRoot();
+        testCarrotRoot.fertilized = true;
+        testCarrotRoot.harvested = true;
+        Class actual = testCarrotRoot.yield().getClass();
+        Assert.assertNotNull(actual);
+    }
 }

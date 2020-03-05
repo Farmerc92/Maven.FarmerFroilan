@@ -20,23 +20,39 @@ public class FoodStorage {
         store.put("Corn", new ArrayList<>());
     }
 
-    public void storeCarrot(Carrot carrot){
-        store.get("Carrots").add(carrot);
+    public Map<String, ArrayList<Edible>> getStore() {
+        return store;
     }
-    public void storeOnion(Onion onion){
-        store.get("Onions").add(onion);
+
+    public void storeCarrot(Carrot... args){
+        for (Carrot c : args) {
+            store.get("Carrots").add(c);
+        }
     }
-    public void storeEgg(Egg egg){
-        store.get("Eggs").add(egg);
+    public void storeOnion(Onion... args){
+        for (Onion o : args) {
+            store.get("Onions").add(o);
+        }
     }
-    public void storePotato(Potato potato){
-        store.get("Potatoes").add(potato);
+    public void storeEgg(Egg... args){
+        for (Egg e : args) {
+            store.get("Eggs").add(e);
+        }
     }
-    public void storeTomato(Tomato tomato){
-        store.get("Tomatoes").add(tomato);
+    public void storePotato(Potato... args){
+        for (Potato p : args) {
+            store.get("Potatoes").add(p);
+        }
     }
-    public void storeEarCorn(EarCorn earCorn){
-        store.get("Corn").add(earCorn);
+    public void storeTomato(Tomato... args){
+        for (Tomato t : args) {
+            store.get("Tomatoes").add(t);
+        }
+    }
+    public void storeEarCorn(EarCorn... args){
+        for (EarCorn e : args) {
+            store.get("Corn").add(e);
+        }
     }
     public int carrotAmount(){
         return store.get("Carrots").size();
