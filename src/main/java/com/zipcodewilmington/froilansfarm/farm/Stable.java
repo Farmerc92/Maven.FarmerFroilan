@@ -37,4 +37,7 @@ public class Stable{
     public List getHorses(){
         return this.horses;
     }
+    public Horse getTheHorse(){
+        return horses.get(0);
+    }
 }

@@ -33,7 +33,7 @@ public class FoodStorageTest {
     @Test
     public void storeEgg() {
         Egg egg = new Egg();
-        storage.storeEgg(egg);
+        storage.storeEgg(1);
         Assert.assertEquals(1, storage.eggAmount());
     }
 
@@ -47,14 +47,14 @@ public class FoodStorageTest {
     @Test
     public void storeTomato() {
         Tomato tomato = new Tomato();
-        storage.storeTomato(tomato);
+        storage.storeTomato(1);
         Assert.assertEquals(1, storage.tomatoAmount());
     }
 
     @Test
     public void storeEarCorn() {
         EarCorn earCorn = new EarCorn();
-        storage.storeEarCorn(earCorn);
+        storage.storeEarCorn(1);
         Assert.assertEquals(1, storage.earCornAmount());
     }
 
@@ -77,7 +77,7 @@ public class FoodStorageTest {
     @Test
     public void removeEgg() {
         Egg egg = new Egg();
-        storage.storeEgg(egg);
+        storage.storeEgg(1);
         storage.removeEgg();
         Assert.assertEquals(0, storage.eggAmount());
     }
@@ -93,7 +93,7 @@ public class FoodStorageTest {
     @Test
     public void removeTomato() {
         Tomato tomato = new Tomato();
-        storage.storeTomato(tomato);
+        storage.storeTomato(1);
         storage.removeTomato();
         Assert.assertEquals(0, storage.tomatoAmount());
     }
@@ -101,7 +101,7 @@ public class FoodStorageTest {
     @Test
     public void removeEarCorn() {
         EarCorn earCorn = new EarCorn();
-        storage.storeEarCorn(earCorn);
+        storage.storeEarCorn(1);
         storage.removeEarCorn();
         Assert.assertEquals(0, storage.earCornAmount());
     }

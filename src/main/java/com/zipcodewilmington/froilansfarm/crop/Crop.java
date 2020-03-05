@@ -11,4 +11,12 @@ public abstract class Crop {
     public void setFertilized(boolean fertilized) {
         this.fertilized = fertilized;
     }
+
+    public boolean isFertilized(){
+        return fertilized;
+    }
+
+    public boolean isHarvested(){
+        return harvested;
+    }
 }

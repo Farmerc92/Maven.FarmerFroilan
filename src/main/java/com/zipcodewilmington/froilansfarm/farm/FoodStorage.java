@@ -34,9 +34,9 @@ public class FoodStorage {
             store.get("Onions").add(o);
         }
     }
-    public void storeEgg(Egg... args){
-        for (Egg e : args) {
-            store.get("Eggs").add(e);
+    public void storeEgg(int num){
+        for (int i = 0;i<num;i++) {
+            store.get("Eggs").add(new Egg());
         }
     }
     public void storePotato(Potato... args){
@@ -44,14 +44,14 @@ public class FoodStorage {
             store.get("Potatoes").add(p);
         }
     }
-    public void storeTomato(Tomato... args){
-        for (Tomato t : args) {
-            store.get("Tomatoes").add(t);
+    public void storeTomato(int num){
+        for (int i = 0;i<num;i++) {
+            store.get("Tomatoes").add(new Tomato());
         }
     }
-    public void storeEarCorn(EarCorn... args){
-        for (EarCorn e : args) {
-            store.get("Corn").add(e);
+    public void storeEarCorn(int numOfEars){
+        for (int i = 0;i<numOfEars;i++) {
+            store.get("Corn").add(new EarCorn());
         }
     }
     public int carrotAmount(){

@@ -36,7 +36,7 @@ public class Tractor extends Vehicle implements FarmVehicle, Rideable {
                     row.get(j).setHarvested(true);
                     if (row.get(j) instanceof CornStalk){
                         EarCorn earCorn = ((CornStalk) row.get(j)).yield();
-                        storage.storeEarCorn(earCorn);
+                        storage.storeEarCorn(1);
                     }
                     else if (row.get(j) instanceof CarrotRoot){
                         Carrot carrot = ((CarrotRoot) row.get(j)).yield();
@@ -52,7 +52,7 @@ public class Tractor extends Vehicle implements FarmVehicle, Rideable {
                     }
                     else if (row.get(j) instanceof TomatoPlant){
                         Tomato tomato = ((TomatoPlant) row.get(j)).yield();
-                        storage.storeTomato(tomato);
+                        storage.storeTomato(1);
                     }
                 }
             }
