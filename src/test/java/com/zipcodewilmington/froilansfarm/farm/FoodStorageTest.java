@@ -4,10 +4,18 @@ import com.zipcodewilmington.froilansfarm.food.*;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Map;
+
 public class FoodStorageTest {
 
     FoodStorage storage = new FoodStorage();
 
+    @Test
+    public void getStoreTest(){
+        Map<String , ArrayList<Edible>> mapTest = storage.getStore();
+        Assert.assertFalse(mapTest.isEmpty());
+    }
     @Test
     public void storeCarrot() {
         Carrot carrot = new Carrot();
